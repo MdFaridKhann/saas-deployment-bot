@@ -50,7 +50,7 @@ async function handleSendMessage() {
 
     try {
         // Dynamic path configuration optimized for Vercel builds
-        const response = await fetch('http://127.0.0.1:8000/api/chat', {
+        const response = await fetch('https://saas-deployment-bot.onrender.com/api/chat', {
             method: 'POST',
             headers: { 
                 'Content-Type': 'application/json'
