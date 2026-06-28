@@ -4,11 +4,13 @@ from pydantic import BaseModel
 from gemini_service import generate_chat_response
 
 app = FastAPI(
-    title="GenAI Chatbot SaaS API created by MD FARID KHAN ",
+    title="GenAI Chatbot SaaS API created by MD FARID KHAN",
     description="FastAPI Backend for Gemini Integration",
     version="1.0.0"
 )
-
+@app.get("/")
+def health_check():
+    return {"status": "ok"}
 # Enable CORS so your frontend can connect seamlessly
 app.add_middleware(
     CORSMiddleware,
